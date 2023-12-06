@@ -44,7 +44,7 @@ func Test_isInt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := isInt(tt.args); got != tt.want {
+			if _, got := isInt(tt.args); got != tt.want {
 				t.Errorf("isInt() = %v, want %v", got, tt.want)
 			}
 		})
