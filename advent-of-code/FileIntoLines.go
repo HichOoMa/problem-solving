@@ -7,9 +7,7 @@ import (
 )
 
 func FileIntoLines(uri string) []string {
-	fileBytes, err := os.ReadFile(
-		"/home/hichoma/Dev/problem-solving/advent-of-code/2023/day3/puzzle.txt",
-	)
+	fileBytes, err := os.ReadFile(uri)
 	if err != nil {
 		fmt.Print(err)
 	}
