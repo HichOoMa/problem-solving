@@ -24,3 +24,16 @@ func containsDuplicate(nums []int) bool {
 		}
 	}
 }
+
+func containsDuplicateHashSet(nums []int) bool {
+	hashSet := make(map[int]bool, 0)
+	for i := 0; i < len(nums); i++ {
+		_, ok := hashSet[nums[i]]
+		if !ok {
+			hashSet[nums[i]] = true
+		} else {
+			return true
+		}
+	}
+	return false
+}
